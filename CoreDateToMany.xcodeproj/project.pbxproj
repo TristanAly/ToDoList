@@ -17,8 +17,8 @@
 		17675E6B2967749300B8BDED /* CoreDateToMany.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 17675E692967749300B8BDED /* CoreDateToMany.xcdatamodeld */; };
 		17675E722967769E00B8BDED /* UpdateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17675E712967769E00B8BDED /* UpdateView.swift */; };
 		17675E74296779B900B8BDED /* TaskDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17675E73296779B900B8BDED /* TaskDetail.swift */; };
-		17675E7929677D6A00B8BDED /* Employee+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17675E7529677D6A00B8BDED /* Employee+CoreDataClass.swift */; };
-		17675E7A29677D6A00B8BDED /* Employee+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17675E7629677D6A00B8BDED /* Employee+CoreDataProperties.swift */; };
+		17675E7929677D6A00B8BDED /* TaskItem+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17675E7529677D6A00B8BDED /* TaskItem+CoreDataClass.swift */; };
+		17675E7A29677D6A00B8BDED /* TaskItem+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17675E7629677D6A00B8BDED /* TaskItem+CoreDataProperties.swift */; };
 		17675E7B29677D6A00B8BDED /* Category+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17675E7729677D6A00B8BDED /* Category+CoreDataClass.swift */; };
 		17675E7C29677D6A00B8BDED /* Category+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17675E7829677D6A00B8BDED /* Category+CoreDataProperties.swift */; };
 		17C28A2729680EB000751ECB /* TaskEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C28A2629680EB000751ECB /* TaskEditView.swift */; };
@@ -40,8 +40,8 @@
 		17675E6A2967749300B8BDED /* CoreDateToMany.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDateToMany.xcdatamodel; sourceTree = "<group>"; };
 		17675E712967769E00B8BDED /* UpdateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateView.swift; sourceTree = "<group>"; };
 		17675E73296779B900B8BDED /* TaskDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDetail.swift; sourceTree = "<group>"; };
-		17675E7529677D6A00B8BDED /* Employee+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Employee+CoreDataClass.swift"; path = "CoreDateToMany/CoreDataManager/Employee+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
-		17675E7629677D6A00B8BDED /* Employee+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Employee+CoreDataProperties.swift"; path = "CoreDateToMany/CoreDataManager/Employee+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		17675E7529677D6A00B8BDED /* TaskItem+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "TaskItem+CoreDataClass.swift"; path = "CoreDateToMany/CoreDataManager/TaskItem+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		17675E7629677D6A00B8BDED /* TaskItem+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "TaskItem+CoreDataProperties.swift"; path = "CoreDateToMany/CoreDataManager/TaskItem+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		17675E7729677D6A00B8BDED /* Category+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Category+CoreDataClass.swift"; path = "CoreDateToMany/CoreDataManager/Category+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
 		17675E7829677D6A00B8BDED /* Category+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Category+CoreDataProperties.swift"; path = "CoreDateToMany/CoreDataManager/Category+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		17C28A2629680EB000751ECB /* TaskEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskEditView.swift; sourceTree = "<group>"; };
@@ -136,8 +136,8 @@
 		17D40F7B296857DF00E4A133 /* CoreDataManager */ = {
 			isa = PBXGroup;
 			children = (
-				17675E7529677D6A00B8BDED /* Employee+CoreDataClass.swift */,
-				17675E7629677D6A00B8BDED /* Employee+CoreDataProperties.swift */,
+				17675E7529677D6A00B8BDED /* TaskItem+CoreDataClass.swift */,
+				17675E7629677D6A00B8BDED /* TaskItem+CoreDataProperties.swift */,
 				17675E7729677D6A00B8BDED /* Category+CoreDataClass.swift */,
 				17675E7829677D6A00B8BDED /* Category+CoreDataProperties.swift */,
 			);
@@ -226,8 +226,8 @@
 				17675E7B29677D6A00B8BDED /* Category+CoreDataClass.swift in Sources */,
 				1757BABF29680BEA00C78BCD /* TaskListViewl.swift in Sources */,
 				17675E6B2967749300B8BDED /* CoreDateToMany.xcdatamodeld in Sources */,
-				17675E7A29677D6A00B8BDED /* Employee+CoreDataProperties.swift in Sources */,
-				17675E7929677D6A00B8BDED /* Employee+CoreDataClass.swift in Sources */,
+				17675E7A29677D6A00B8BDED /* TaskItem+CoreDataProperties.swift in Sources */,
+				17675E7929677D6A00B8BDED /* TaskItem+CoreDataClass.swift in Sources */,
 				17C28A2B2968117D00751ECB /* NotificationManager.swift in Sources */,
 				17675E7C29677D6A00B8BDED /* Category+CoreDataProperties.swift in Sources */,
 				17675E5F2967749200B8BDED /* CoreDateToManyApp.swift in Sources */,
