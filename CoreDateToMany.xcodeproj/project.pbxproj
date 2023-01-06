@@ -40,10 +40,10 @@
 		17675E6A2967749300B8BDED /* CoreDateToMany.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDateToMany.xcdatamodel; sourceTree = "<group>"; };
 		17675E712967769E00B8BDED /* UpdateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateView.swift; sourceTree = "<group>"; };
 		17675E73296779B900B8BDED /* CompagnyDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompagnyDetail.swift; sourceTree = "<group>"; };
-		17675E7529677D6A00B8BDED /* Employee+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Employee+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
-		17675E7629677D6A00B8BDED /* Employee+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Employee+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
-		17675E7729677D6A00B8BDED /* Company+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Company+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
-		17675E7829677D6A00B8BDED /* Company+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Company+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		17675E7529677D6A00B8BDED /* Employee+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Employee+CoreDataClass.swift"; path = "CoreDateToMany/CoreDataManager/Employee+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		17675E7629677D6A00B8BDED /* Employee+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Employee+CoreDataProperties.swift"; path = "CoreDateToMany/CoreDataManager/Employee+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		17675E7729677D6A00B8BDED /* Company+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Company+CoreDataClass.swift"; path = "CoreDateToMany/CoreDataManager/Company+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		17675E7829677D6A00B8BDED /* Company+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Company+CoreDataProperties.swift"; path = "CoreDateToMany/CoreDataManager/Company+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		17C28A2629680EB000751ECB /* TaskEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskEditView.swift; sourceTree = "<group>"; };
 		17C28A2829680EFF00751ECB /* AddTaskViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskViewModel.swift; sourceTree = "<group>"; };
 		17C28A2A2968117D00751ECB /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
@@ -81,21 +81,11 @@
 		17675E5D2967749200B8BDED /* CoreDateToMany */ = {
 			isa = PBXGroup;
 			children = (
-				17675E7529677D6A00B8BDED /* Employee+CoreDataClass.swift */,
-				17675E7629677D6A00B8BDED /* Employee+CoreDataProperties.swift */,
-				17675E7729677D6A00B8BDED /* Company+CoreDataClass.swift */,
-				17675E7829677D6A00B8BDED /* Company+CoreDataProperties.swift */,
 				17675E5E2967749200B8BDED /* CoreDateToManyApp.swift */,
-				17675E602967749200B8BDED /* ContentView.swift */,
-				17675E73296779B900B8BDED /* CompagnyDetail.swift */,
-				1757BABE29680BEA00C78BCD /* EmployeeDétail.swift */,
-				1757BAC029680D1900C78BCD /* TaskUpdateView.swift */,
-				17C28A2829680EFF00751ECB /* AddTaskViewModel.swift */,
-				17C28A2629680EB000751ECB /* TaskEditView.swift */,
-				17C28A2E2968295A00751ECB /* CategorieCellView.swift */,
-				17C28A2A2968117D00751ECB /* NotificationManager.swift */,
-				17C28A2C2968120400751ECB /*  ButtonAddTaskView.swift */,
-				17675E712967769E00B8BDED /* UpdateView.swift */,
+				17D40F7B296857DF00E4A133 /* CoreDataManager */,
+				17D40F7A296857C900E4A133 /* ViewModels */,
+				17D40F792968574200E4A133 /* Managers */,
+				17D40F782968573200E4A133 /* Views */,
 				17675E622967749300B8BDED /* Assets.xcassets */,
 				17675E672967749300B8BDED /* Persistence.swift */,
 				17675E692967749300B8BDED /* CoreDateToMany.xcdatamodeld */,
@@ -110,6 +100,48 @@
 				17675E652967749300B8BDED /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		17D40F782968573200E4A133 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				17675E602967749200B8BDED /* ContentView.swift */,
+				17C28A2E2968295A00751ECB /* CategorieCellView.swift */,
+				17C28A2C2968120400751ECB /*  ButtonAddTaskView.swift */,
+				17675E712967769E00B8BDED /* UpdateView.swift */,
+				1757BABE29680BEA00C78BCD /* EmployeeDétail.swift */,
+				17675E73296779B900B8BDED /* CompagnyDetail.swift */,
+				1757BAC029680D1900C78BCD /* TaskUpdateView.swift */,
+				17C28A2629680EB000751ECB /* TaskEditView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		17D40F792968574200E4A133 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				17C28A2A2968117D00751ECB /* NotificationManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		17D40F7A296857C900E4A133 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				17C28A2829680EFF00751ECB /* AddTaskViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		17D40F7B296857DF00E4A133 /* CoreDataManager */ = {
+			isa = PBXGroup;
+			children = (
+				17675E7529677D6A00B8BDED /* Employee+CoreDataClass.swift */,
+				17675E7629677D6A00B8BDED /* Employee+CoreDataProperties.swift */,
+				17675E7729677D6A00B8BDED /* Company+CoreDataClass.swift */,
+				17675E7829677D6A00B8BDED /* Company+CoreDataProperties.swift */,
+			);
+			path = CoreDataManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
