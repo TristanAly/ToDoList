@@ -13,7 +13,7 @@ struct CategorieCellView: View {
         var body: some View {
                 VStack(alignment: .leading){
                     HStack{
-                    Image(systemName: entity.icon?.capitalized ?? "star.fill")
+                        Image(systemName: entity.icon?.lowercased() ?? "star.fill")
                         .font(.system(size: 25))
                         .padding()
                         Text(entity.name?.capitalized ?? "")

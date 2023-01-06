@@ -59,6 +59,7 @@ struct ContentView: View {
                             NavigationLink(destination: CompagnyDetail(company: item, employee: employee), label: {
                                 HStack{
                                     CategorieCellView(entity: item)
+                                        .padding(.top,10)
                                 }
                             }).listRowSeparator(.hidden)
                                 .listRowBackground(Color.clear)
