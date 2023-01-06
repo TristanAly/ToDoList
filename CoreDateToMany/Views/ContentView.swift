@@ -16,7 +16,7 @@ struct ContentView: View {
         animation: .default)
     private var items: FetchedResults<Category>
     
-    var employee = Employee()
+    var task = TaskItem()
     @State var companyName: String = ""
     @State var selectIcon = ""
     @State var show = false
@@ -56,7 +56,7 @@ struct ContentView: View {
                     }
                     List {
                         ForEach(items) { item in
-                            NavigationLink(destination: CompagnyDetail(category: item, employee: employee), label: {
+                            NavigationLink(destination: CompagnyDetail(category: item, task: task), label: {
                                 HStack{
                                     CategorieCellView(entity: item)
                                         .padding(.top,10)

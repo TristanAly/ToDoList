@@ -11,7 +11,7 @@ struct CompagnyDetail: View {
     @Environment(\.managedObjectContext) private var viewContext
     
     @StateObject var category: Category
-    @StateObject var employee: Employee
+    @StateObject var task: TaskItem
     @State private var employeeName: String = ""
     @State private var show = false
     @State private var taskFast = false
@@ -51,13 +51,13 @@ struct CompagnyDetail: View {
                     }.padding()
                 }
                 List{
-                    ForEach(category.employeesArray, id: \.name) { employee in
+                    ForEach(category.tasksArray, id: \.name) { task in
                         HStack{
-                            self.image(for: employee.isComplete).onTapGesture {
-                                employee.isComplete.toggle()
-                                if employee.isComplete == true {
+                            self.image(for: task.isComplete).onTapGesture {
+                                task.isComplete.toggle()
+                                if task.isComplete == true {
                                     withAnimation {
-                                        deleteIsCompleted(task: employee)
+                                        deleteIsCompleted(task: task)
                                     }
                                 }
                             }
@@ -65,8 +65,8 @@ struct CompagnyDetail: View {
                             .foregroundStyle(Color.red, Color.blue)
                             .font(.title2)
                             .padding(.horizontal)
-                            NavigationLink(destination: EmployeeDe_tail(employee: employee, category: category)) {
-                                Text(employee.unwrappedName)
+                            NavigationLink(destination: TaskListView(task: task, category: category)) {
+                                Text(task.unwrappedName)
                                     .font(.title3)
                                     .bold()
                                     .padding(.vertical,8)
@@ -104,25 +104,25 @@ struct CompagnyDetail: View {
         if itemToMove < destination{
             var startIndex = itemToMove + 1
             let endIndex = destination - 1
-            var startOrder = category.employeesArray[itemToMove].id
+            var startOrder = category.tasksArray[itemToMove].id
             while startIndex <= endIndex {
-                category.employeesArray[itemToMove].id = startOrder
+                category.tasksArray[itemToMove].id = startOrder
                 startOrder = startOrder + 1
                 startIndex = startIndex + 1
             }
-            category.employeesArray[itemToMove].id = startOrder
+            category.tasksArray[itemToMove].id = startOrder
         }
         else if destination < itemToMove {
             var startIndex = destination
             let endIndex = itemToMove - 1
-            var startOrder = category.employeesArray[destination].id + 1
-            let newOrder = category.employeesArray[destination].id
+            var startOrder = category.tasksArray[destination].id + 1
+            let newOrder = category.tasksArray[destination].id
             while startIndex <= endIndex {
-                category.employeesArray[itemToMove].id = startOrder
+                category.tasksArray[itemToMove].id = startOrder
                 startOrder = startOrder + 1
                 startIndex = startIndex + 1
             }
-            category.employeesArray[itemToMove].id = newOrder
+            category.tasksArray[itemToMove].id = newOrder
         }
         do {
             try viewContext.save()
@@ -134,10 +134,10 @@ struct CompagnyDetail: View {
     
     private func addEmployee() {
         withAnimation {
-            let newEmployee = Employee(context: viewContext)
-            newEmployee.name = employeeName
+            let newTaskItem = TaskItem(context: viewContext)
+            newTaskItem.name = employeeName
             
-            category.addToEmployees(newEmployee)
+            category.addToEmployees(newTaskItem)
             do {
                 try viewContext.save()
             } catch {
@@ -148,7 +148,7 @@ struct CompagnyDetail: View {
     }
     private func deleteEmployee(offsets: IndexSet) {
         withAnimation {
-            offsets.map { category.employeesArray[$0] }.forEach(viewContext.delete)
+            offsets.map { category.tasksArray[$0] }.forEach(viewContext.delete)
 
             do {
                 try viewContext.save()
@@ -158,7 +158,7 @@ struct CompagnyDetail: View {
             }
         }
     }
-    private func deleteIsCompleted(task: Employee) {
+    private func deleteIsCompleted(task: TaskItem) {
         withAnimation {
             let test = task
             if test.isComplete == true {
@@ -180,13 +180,13 @@ struct CompagnyDetail_Previews: PreviewProvider {
         PersistenceController.preview.container.viewContext
         let newCategory = Category(context: viewContext)
         newCategory.name = "Apple"
-        let employee1 = Employee(context: viewContext)
-        employee1.name = "Josh"
-        let employee2 = Employee(context: viewContext)
-        employee2.name = "Apo"
+        let taskItem1 = TaskItem(context: viewContext)
+        taskItem1.name = "Josh"
+        let taskItem2 = TaskItem(context: viewContext)
+        taskItem2.name = "Apo"
         
-        newCategory.addToEmployees(employee1)
-        newCategory.addToEmployees(employee2)
-        return CompagnyDetail(category: newCategory, employee: employee2).environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+        newCategory.addToEmployees(taskItem1)
+        newCategory.addToEmployees(taskItem2)
+        return CompagnyDetail(category: newCategory, task: taskItem2).environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }

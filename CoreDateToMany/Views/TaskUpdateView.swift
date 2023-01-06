@@ -11,7 +11,7 @@ struct TaskUpdateView: View {
         @Environment(\.managedObjectContext) private var viewContext
         @Environment(\.dismiss) private var dismiss
         @State var addTaskVM = AddTaskViewModel()
-        @StateObject var selected: Employee
+        @StateObject var selected: TaskItem
         @StateObject var category: Category
         private func updateItem() {
             selected.name = addTaskVM.task
@@ -89,10 +89,10 @@ struct TaskUpdateView_Previews: PreviewProvider {
         PersistenceController.preview.container.viewContext
         let newCategory = Category(context: viewContext)
         newCategory.name = "Apple"
-        let employee1 = Employee(context: viewContext)
-        employee1.name = "Josh"
-        let employee2 = Employee(context: viewContext)
-        employee2.name = "Apo"
-        return TaskUpdateView(selected: employee2, category: newCategory).environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+        let taskItem1 = TaskItem(context: viewContext)
+        taskItem1.name = "Josh"
+        let taskItem2 = TaskItem(context: viewContext)
+        taskItem2.name = "Apo"
+        return TaskUpdateView(selected: taskItem2, category: newCategory).environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }

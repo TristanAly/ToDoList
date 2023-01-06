@@ -10,10 +10,10 @@ import Foundation
 import CoreData
 
 
-extension Employee {
+extension TaskItem {
 
-    @nonobjc public class func fetchRequest() -> NSFetchRequest<Employee> {
-        return NSFetchRequest<Employee>(entityName: "Employee")
+    @nonobjc public class func fetchRequest() -> NSFetchRequest<TaskItem> {
+        return NSFetchRequest<TaskItem>(entityName: "Task")
     }
 
     @NSManaged public var name: String?
@@ -41,6 +41,6 @@ extension Employee {
 
 }
 
-extension Employee : Identifiable {
+extension TaskItem : Identifiable {
 
 }

@@ -17,7 +17,7 @@ struct TaskEditView: View {
     
     private func addItem() {
         withAnimation {
-            let newItem = Employee(context: viewContext)
+            let newItem = TaskItem(context: viewContext)
             newItem.name = addTaskVM.task
             newItem.note = addTaskVM.note
 //            newItem.category = addTaskVM.category

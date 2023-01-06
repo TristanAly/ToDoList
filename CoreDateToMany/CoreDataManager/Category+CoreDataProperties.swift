@@ -18,7 +18,7 @@ extension Category {
 
     @NSManaged public var name: String?
     @NSManaged public var icon: String?
-    @NSManaged public var employees: NSSet?
+    @NSManaged public var tasks: NSSet?
     
     public var unwrappedName: String {
         name ?? "Unknown name"
@@ -27,11 +27,11 @@ extension Category {
         icon ?? "star.fill"
     }
     
-    public var employeesArray: [Employee] {
-        let employeeSet = employees as? Set<Employee> ?? []
+    public var tasksArray: [TaskItem] {
+        let taskSet = tasks as? Set<TaskItem> ?? []
         
-        return employeeSet.sorted(by: { employees, employees in
-            employees.unwrappedName < employees.unwrappedName
+        return taskSet.sorted(by: { tasks, tasks in
+            tasks.unwrappedName < tasks.unwrappedName
         })
     }
 
@@ -40,16 +40,16 @@ extension Category {
 // MARK: Generated accessors for employees
 extension Category {
 
-    @objc(addEmployeesObject:)
-    @NSManaged public func addToEmployees(_ value: Employee)
+    @objc(addTasksObject:)
+    @NSManaged public func addToEmployees(_ value: TaskItem)
 
-    @objc(removeEmployeesObject:)
-    @NSManaged public func removeFromEmployees(_ value: Employee)
+    @objc(removeTasksObject:)
+    @NSManaged public func removeFromEmployees(_ value: TaskItem)
 
-    @objc(addEmployees:)
+    @objc(addTasks:)
     @NSManaged public func addToEmployees(_ values: NSSet)
 
-    @objc(removeEmployees:)
+    @objc(removeTasks:)
     @NSManaged public func removeFromEmployees(_ values: NSSet)
 
 }

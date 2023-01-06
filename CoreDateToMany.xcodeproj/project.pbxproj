@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1757BABF29680BEA00C78BCD /* EmployeeDétail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1757BABE29680BEA00C78BCD /* EmployeeDétail.swift */; };
+		1757BABF29680BEA00C78BCD /* TaskListViewl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1757BABE29680BEA00C78BCD /* TaskListViewl.swift */; };
 		1757BAC129680D1900C78BCD /* TaskUpdateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1757BAC029680D1900C78BCD /* TaskUpdateView.swift */; };
 		17675E5F2967749200B8BDED /* CoreDateToManyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17675E5E2967749200B8BDED /* CoreDateToManyApp.swift */; };
 		17675E612967749200B8BDED /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17675E602967749200B8BDED /* ContentView.swift */; };
@@ -16,11 +16,11 @@
 		17675E682967749300B8BDED /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17675E672967749300B8BDED /* Persistence.swift */; };
 		17675E6B2967749300B8BDED /* CoreDateToMany.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 17675E692967749300B8BDED /* CoreDateToMany.xcdatamodeld */; };
 		17675E722967769E00B8BDED /* UpdateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17675E712967769E00B8BDED /* UpdateView.swift */; };
-		17675E74296779B900B8BDED /* CompagnyDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17675E73296779B900B8BDED /* CompagnyDetail.swift */; };
+		17675E74296779B900B8BDED /* TaskDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17675E73296779B900B8BDED /* TaskDetail.swift */; };
 		17675E7929677D6A00B8BDED /* Employee+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17675E7529677D6A00B8BDED /* Employee+CoreDataClass.swift */; };
 		17675E7A29677D6A00B8BDED /* Employee+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17675E7629677D6A00B8BDED /* Employee+CoreDataProperties.swift */; };
-		17675E7B29677D6A00B8BDED /* Company+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17675E7729677D6A00B8BDED /* Company+CoreDataClass.swift */; };
-		17675E7C29677D6A00B8BDED /* Company+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17675E7829677D6A00B8BDED /* Company+CoreDataProperties.swift */; };
+		17675E7B29677D6A00B8BDED /* Category+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17675E7729677D6A00B8BDED /* Category+CoreDataClass.swift */; };
+		17675E7C29677D6A00B8BDED /* Category+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17675E7829677D6A00B8BDED /* Category+CoreDataProperties.swift */; };
 		17C28A2729680EB000751ECB /* TaskEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C28A2629680EB000751ECB /* TaskEditView.swift */; };
 		17C28A2929680EFF00751ECB /* AddTaskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C28A2829680EFF00751ECB /* AddTaskViewModel.swift */; };
 		17C28A2B2968117D00751ECB /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C28A2A2968117D00751ECB /* NotificationManager.swift */; };
@@ -29,7 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1757BABE29680BEA00C78BCD /* EmployeeDétail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EmployeeDétail.swift"; sourceTree = "<group>"; };
+		1757BABE29680BEA00C78BCD /* TaskListViewl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListViewl.swift; sourceTree = "<group>"; };
 		1757BAC029680D1900C78BCD /* TaskUpdateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskUpdateView.swift; sourceTree = "<group>"; };
 		17675E5B2967749200B8BDED /* CoreDateToMany.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreDateToMany.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		17675E5E2967749200B8BDED /* CoreDateToManyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDateToManyApp.swift; sourceTree = "<group>"; };
@@ -39,11 +39,11 @@
 		17675E672967749300B8BDED /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		17675E6A2967749300B8BDED /* CoreDateToMany.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDateToMany.xcdatamodel; sourceTree = "<group>"; };
 		17675E712967769E00B8BDED /* UpdateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateView.swift; sourceTree = "<group>"; };
-		17675E73296779B900B8BDED /* CompagnyDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompagnyDetail.swift; sourceTree = "<group>"; };
+		17675E73296779B900B8BDED /* TaskDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDetail.swift; sourceTree = "<group>"; };
 		17675E7529677D6A00B8BDED /* Employee+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Employee+CoreDataClass.swift"; path = "CoreDateToMany/CoreDataManager/Employee+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
 		17675E7629677D6A00B8BDED /* Employee+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Employee+CoreDataProperties.swift"; path = "CoreDateToMany/CoreDataManager/Employee+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
-		17675E7729677D6A00B8BDED /* Company+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Company+CoreDataClass.swift"; path = "CoreDateToMany/CoreDataManager/Company+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
-		17675E7829677D6A00B8BDED /* Company+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Company+CoreDataProperties.swift"; path = "CoreDateToMany/CoreDataManager/Company+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		17675E7729677D6A00B8BDED /* Category+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Category+CoreDataClass.swift"; path = "CoreDateToMany/CoreDataManager/Category+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		17675E7829677D6A00B8BDED /* Category+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Category+CoreDataProperties.swift"; path = "CoreDateToMany/CoreDataManager/Category+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		17C28A2629680EB000751ECB /* TaskEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskEditView.swift; sourceTree = "<group>"; };
 		17C28A2829680EFF00751ECB /* AddTaskViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskViewModel.swift; sourceTree = "<group>"; };
 		17C28A2A2968117D00751ECB /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
@@ -109,8 +109,8 @@
 				17C28A2E2968295A00751ECB /* CategorieCellView.swift */,
 				17C28A2C2968120400751ECB /*  ButtonAddTaskView.swift */,
 				17675E712967769E00B8BDED /* UpdateView.swift */,
-				1757BABE29680BEA00C78BCD /* EmployeeDétail.swift */,
-				17675E73296779B900B8BDED /* CompagnyDetail.swift */,
+				1757BABE29680BEA00C78BCD /* TaskListViewl.swift */,
+				17675E73296779B900B8BDED /* TaskDetail.swift */,
 				1757BAC029680D1900C78BCD /* TaskUpdateView.swift */,
 				17C28A2629680EB000751ECB /* TaskEditView.swift */,
 			);
@@ -138,8 +138,8 @@
 			children = (
 				17675E7529677D6A00B8BDED /* Employee+CoreDataClass.swift */,
 				17675E7629677D6A00B8BDED /* Employee+CoreDataProperties.swift */,
-				17675E7729677D6A00B8BDED /* Company+CoreDataClass.swift */,
-				17675E7829677D6A00B8BDED /* Company+CoreDataProperties.swift */,
+				17675E7729677D6A00B8BDED /* Category+CoreDataClass.swift */,
+				17675E7829677D6A00B8BDED /* Category+CoreDataProperties.swift */,
 			);
 			path = CoreDataManager;
 			sourceTree = "<group>";
@@ -219,17 +219,17 @@
 				17675E612967749200B8BDED /* ContentView.swift in Sources */,
 				17C28A2929680EFF00751ECB /* AddTaskViewModel.swift in Sources */,
 				17C28A2729680EB000751ECB /* TaskEditView.swift in Sources */,
-				17675E74296779B900B8BDED /* CompagnyDetail.swift in Sources */,
+				17675E74296779B900B8BDED /* TaskDetail.swift in Sources */,
 				17C28A2F2968295A00751ECB /* CategorieCellView.swift in Sources */,
 				17C28A2D2968120400751ECB /*  ButtonAddTaskView.swift in Sources */,
 				17675E722967769E00B8BDED /* UpdateView.swift in Sources */,
-				17675E7B29677D6A00B8BDED /* Company+CoreDataClass.swift in Sources */,
-				1757BABF29680BEA00C78BCD /* EmployeeDétail.swift in Sources */,
+				17675E7B29677D6A00B8BDED /* Category+CoreDataClass.swift in Sources */,
+				1757BABF29680BEA00C78BCD /* TaskListViewl.swift in Sources */,
 				17675E6B2967749300B8BDED /* CoreDateToMany.xcdatamodeld in Sources */,
 				17675E7A29677D6A00B8BDED /* Employee+CoreDataProperties.swift in Sources */,
 				17675E7929677D6A00B8BDED /* Employee+CoreDataClass.swift in Sources */,
 				17C28A2B2968117D00751ECB /* NotificationManager.swift in Sources */,
-				17675E7C29677D6A00B8BDED /* Company+CoreDataProperties.swift in Sources */,
+				17675E7C29677D6A00B8BDED /* Category+CoreDataProperties.swift in Sources */,
 				17675E5F2967749200B8BDED /* CoreDateToManyApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
