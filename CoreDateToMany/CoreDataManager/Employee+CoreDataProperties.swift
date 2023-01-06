@@ -21,7 +21,7 @@ extension Employee {
     @NSManaged public var note: String?
     @NSManaged public var isComplete: Bool
     @NSManaged public var id: Int64
-    @NSManaged public var company: Company?
+    @NSManaged public var categories: Category?
     
     public var unwrappedName: String {
         name ?? "Unknown task"

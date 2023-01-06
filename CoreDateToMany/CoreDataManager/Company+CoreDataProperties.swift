@@ -10,10 +10,10 @@ import Foundation
 import CoreData
 
 
-extension Company {
+extension Category {
 
-    @nonobjc public class func fetchRequest() -> NSFetchRequest<Company> {
-        return NSFetchRequest<Company>(entityName: "Company")
+    @nonobjc public class func fetchRequest() -> NSFetchRequest<Category> {
+        return NSFetchRequest<Category>(entityName: "Category")
     }
 
     @NSManaged public var name: String?
@@ -38,7 +38,7 @@ extension Company {
 }
 
 // MARK: Generated accessors for employees
-extension Company {
+extension Category {
 
     @objc(addEmployeesObject:)
     @NSManaged public func addToEmployees(_ value: Employee)
@@ -54,6 +54,6 @@ extension Company {
 
 }
 
-extension Company : Identifiable {
+extension Category : Identifiable {
 
 }

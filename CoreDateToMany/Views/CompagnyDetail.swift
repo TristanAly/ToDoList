@@ -10,7 +10,7 @@ import SwiftUI
 struct CompagnyDetail: View {
     @Environment(\.managedObjectContext) private var viewContext
     
-    @StateObject var company: Company
+    @StateObject var category: Category
     @StateObject var employee: Employee
     @State private var employeeName: String = ""
     @State private var show = false
@@ -51,7 +51,7 @@ struct CompagnyDetail: View {
                     }.padding()
                 }
                 List{
-                    ForEach(company.employeesArray, id: \.name) { employee in
+                    ForEach(category.employeesArray, id: \.name) { employee in
                         HStack{
                             self.image(for: employee.isComplete).onTapGesture {
                                 employee.isComplete.toggle()
@@ -65,7 +65,7 @@ struct CompagnyDetail: View {
                             .foregroundStyle(Color.red, Color.blue)
                             .font(.title2)
                             .padding(.horizontal)
-                            NavigationLink(destination: EmployeeDe_tail(employee: employee, company: company)) {
+                            NavigationLink(destination: EmployeeDe_tail(employee: employee, category: category)) {
                                 Text(employee.unwrappedName)
                                     .font(.title3)
                                     .bold()
@@ -77,7 +77,7 @@ struct CompagnyDetail: View {
                 }.listStyle(.plain)
                     .scrollContentBackground(.hidden)
                     .sheet(isPresented: $show) {
-                        TaskEditView(company: company)
+                        TaskEditView(category: category)
                     }
             }
             VStack{
@@ -104,25 +104,25 @@ struct CompagnyDetail: View {
         if itemToMove < destination{
             var startIndex = itemToMove + 1
             let endIndex = destination - 1
-            var startOrder = company.employeesArray[itemToMove].id
+            var startOrder = category.employeesArray[itemToMove].id
             while startIndex <= endIndex {
-                company.employeesArray[itemToMove].id = startOrder
+                category.employeesArray[itemToMove].id = startOrder
                 startOrder = startOrder + 1
                 startIndex = startIndex + 1
             }
-            company.employeesArray[itemToMove].id = startOrder
+            category.employeesArray[itemToMove].id = startOrder
         }
         else if destination < itemToMove {
             var startIndex = destination
             let endIndex = itemToMove - 1
-            var startOrder = company.employeesArray[destination].id + 1
-            let newOrder = company.employeesArray[destination].id
+            var startOrder = category.employeesArray[destination].id + 1
+            let newOrder = category.employeesArray[destination].id
             while startIndex <= endIndex {
-                company.employeesArray[itemToMove].id = startOrder
+                category.employeesArray[itemToMove].id = startOrder
                 startOrder = startOrder + 1
                 startIndex = startIndex + 1
             }
-            company.employeesArray[itemToMove].id = newOrder
+            category.employeesArray[itemToMove].id = newOrder
         }
         do {
             try viewContext.save()
@@ -137,7 +137,7 @@ struct CompagnyDetail: View {
             let newEmployee = Employee(context: viewContext)
             newEmployee.name = employeeName
             
-            company.addToEmployees(newEmployee)
+            category.addToEmployees(newEmployee)
             do {
                 try viewContext.save()
             } catch {
@@ -148,7 +148,7 @@ struct CompagnyDetail: View {
     }
     private func deleteEmployee(offsets: IndexSet) {
         withAnimation {
-            offsets.map { company.employeesArray[$0] }.forEach(viewContext.delete)
+            offsets.map { category.employeesArray[$0] }.forEach(viewContext.delete)
 
             do {
                 try viewContext.save()
@@ -178,15 +178,15 @@ struct CompagnyDetail_Previews: PreviewProvider {
     static var previews: some View {
         let viewContext =
         PersistenceController.preview.container.viewContext
-        let newCompany = Company(context: viewContext)
-        newCompany.name = "Apple"
+        let newCategory = Category(context: viewContext)
+        newCategory.name = "Apple"
         let employee1 = Employee(context: viewContext)
         employee1.name = "Josh"
         let employee2 = Employee(context: viewContext)
         employee2.name = "Apo"
         
-        newCompany.addToEmployees(employee1)
-        newCompany.addToEmployees(employee2)
-        return CompagnyDetail(company: newCompany, employee: employee2).environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+        newCategory.addToEmployees(employee1)
+        newCategory.addToEmployees(employee2)
+        return CompagnyDetail(category: newCategory, employee: employee2).environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }

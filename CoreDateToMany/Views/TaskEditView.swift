@@ -11,7 +11,7 @@ struct TaskEditView: View {
     @Environment(\.managedObjectContext) private var viewContext
     @Environment(\.dismiss) private var dismiss
     @State var addTaskVM = AddTaskViewModel()
-    @StateObject var company: Company
+    @StateObject var category: Category
     let notify = NotificationManager()
     
     
@@ -23,7 +23,7 @@ struct TaskEditView: View {
 //            newItem.category = addTaskVM.category
             newItem.timestamp = addTaskVM.timestamp
             
-            company.addToEmployees(newItem)
+            category.addToEmployees(newItem)
             do {
                 try viewContext.save()
             } catch {

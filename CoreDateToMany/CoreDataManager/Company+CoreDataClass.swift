@@ -9,7 +9,7 @@
 import Foundation
 import CoreData
 
-@objc(Company)
-public class Company: NSManagedObject {
+@objc(Category)
+public class Category: NSManagedObject {
 
 }

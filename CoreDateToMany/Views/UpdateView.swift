@@ -9,7 +9,7 @@ import SwiftUI
 
 struct UpdateView: View {
     @Environment(\.managedObjectContext) private var viewContext
-    @StateObject var company: Company
+    @StateObject var company: Category
     @State private var companyName: String = ""
     var body: some View {
         VStack{
@@ -42,7 +42,7 @@ struct UpdateView: View {
 struct UpdateView_Previews: PreviewProvider {
     static var previews: some View {
         let vc = PersistenceController.preview.container.viewContext
-        let request = Company.fetchRequest()
+        let request = Category.fetchRequest()
         let results = try! vc.fetch(request)
         UpdateView(company: results[0]).environment(\.managedObjectContext, vc)
     }

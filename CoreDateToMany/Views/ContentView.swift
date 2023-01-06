@@ -12,9 +12,9 @@ struct ContentView: View {
     @Environment(\.managedObjectContext) private var viewContext
 
     @FetchRequest(
-        sortDescriptors: [NSSortDescriptor(keyPath: \Company.name, ascending: true)],
+        sortDescriptors: [NSSortDescriptor(keyPath: \Category.name, ascending: true)],
         animation: .default)
-    private var items: FetchedResults<Company>
+    private var items: FetchedResults<Category>
     
     var employee = Employee()
     @State var companyName: String = ""
@@ -56,7 +56,7 @@ struct ContentView: View {
                     }
                     List {
                         ForEach(items) { item in
-                            NavigationLink(destination: CompagnyDetail(company: item, employee: employee), label: {
+                            NavigationLink(destination: CompagnyDetail(category: item, employee: employee), label: {
                                 HStack{
                                     CategorieCellView(entity: item)
                                         .padding(.top,10)
@@ -88,7 +88,7 @@ struct ContentView: View {
                 }
         }
     }
-    private func deleteCategory(cat: Company){
+    private func deleteCategory(cat: Category){
         PersistenceController.shared.container.viewContext.delete(cat)
         do {
             try viewContext.save()
@@ -100,7 +100,7 @@ struct ContentView: View {
 
     private func addItem() {
         withAnimation {
-            let newItem = Company(context: viewContext)
+            let newItem = Category(context: viewContext)
             newItem.name = companyName
             newItem.icon = selectIcon
 

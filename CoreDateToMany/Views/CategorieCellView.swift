@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CategorieCellView: View {
-        let entity: Company
+        let entity: Category
         
         var body: some View {
                 VStack(alignment: .leading){
